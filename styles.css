@@ -1,0 +1,245 @@
+/* Reset default margins, padding, and box sizing. Set smooth scrolling and default font. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Set the body to have relative positioning */
+body {
+    position: relative;
+}
+
+/* Header styling */
+header {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
+    padding: 25px 0; /* Vertical padding */
+}
+
+/* Container for central alignment and width */
+.container {
+    width: 86%; /* Container width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Flexbox container layout */
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1fr 2fr 2fr; /* Flex distribution */
+}
+
+/* Logo image size */
+.logo {
+    width: 150px;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-items: center;
+    gap: 25px; /* Space between items */
+    align-items: center;
+}
+
+/* Navigation links styling */
+nav ul a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Right section styling (search and icons) */
+.right-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Icon styling for header */
+.header-icon {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+/* Set icon size */
+.header-icon, .menu-icon > img {
+    width: 25px;
+    height: auto;
+}
+
+/* Search bar container styling */
+.search-bar {
+    position: relative;
+}
+
+/* Styling for the search input field */
+.search-bar input[type='text'] {
+    width: 400px;
+    padding-inline: 25px;
+    height: 50px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    background-color: hsl(252, 30%, 95%); /* Light color */
+    font-size: 15px;
+}
+
+/* Search button image size */
+.search-btn img {
+    width: 18px;
+}
+
+/* Search button styling */
+.search-btn {
+    width: 70px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -2px;
+    border-radius: 0 20px 20px 0;
+    background-color: #FFA9A3;
+}
+
+
+
+/* Responsive styling for screens under 1050px width */
+@media (max-width: 1050px) {
+    .logo {
+        width: 70px; /* Smaller logo size */
+        margin-right: 20px;
+    }
+    .right {
+        display: none; /* Hide right section */
+    }
+    .header-nav {
+        display: none; /* Hide header nav */
+    }
+    .menu-icon {
+        display: block; /* Show menu icon */
+        z-index: 30; /* Bring to front */
+    }
+
+    .mobile-search-bar {
+        display: block; /* Show search icon */
+    }
+
+    .mobile-search-bar > img {
+        width: 25px;
+    }
+    .menu-icon> img {
+        width: 33px; /* Larger menu icon */
+        height: auto;
+    }
+
+    .mobile-search-bar {
+        display: flex;
+    }
+
+    
+}
+
+/* Sidebar styling */
+.side-bar {
+    position: fixed;  /* Fixed position for scrolling */
+    top: 0;
+    right: -250px;  /* Hidden off-screen initially */
+    height: 100%;  /* Full viewport height */
+    width: 250px;  /* Sidebar width */
+    background-color: rgba(91, 117, 244, 0.867);
+    z-index: 20;  /* Layer above main content */
+    transition: 0.3s ease;  /* Smooth slide-in effect */
+    padding-top: 50px;  /* Padding to align below header */
+}
+
+/* Class to toggle sidebar visibility */
+.side-bar.open {
+    right: 0;  
+}
+
+/* Hide sidebar on larger screens */
+@media (min-width: 1050px) {
+    .side-bar {
+        display: none;
+    }
+    .menu-icon{
+        display: none;
+    }
+    .mobile-search-bar {
+        display: none !important;
+    }
+}
+
+/* .side-bar {
+    display: flex;
+    justify-items: flex-start;
+
+} */
+
+.side-bar > nav ul {
+    flex-direction: column;
+    padding-top: 45px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 20px;
+    
+}
+
+.mobile-search-bar{
+    display: flex;
+    border: 2px solid #87a8cf;
+    border-radius: 50px;
+    padding: 2px;
+    padding-left: 12px;
+    
+    
+}
+
+.mobile-search-bar > input[type='text'] {
+    outline: 0;
+    border: 0;
+    flex-grow: 1;
+    font-size: 13px;
+    font-weight: bold;
+    
+}
+
+.mobile-search-bar > .search-lens {
+    width: 30px;
+    border-radius: 50px;
+    padding: 4px;
+    border: none;
+    background: #FFA9A3;
+}
+
+.mobile-search-bar > .search-lens > img {
+    width: 18px;
+    padding: 2px;
+}
+
+
+
+
+.icon-right {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 
+@media (min-width: 450px) and (max-width: 950px) {}
+
+@media screen {
+    
+} */
+
