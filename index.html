@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -37,12 +37,15 @@
             </div>
 
             <div class="icon-right">
-                <div action="" class="mobile-search-bar">
-                    <input type="text" class="search-box" placeholder="Search...">
+                <form action="" class="mobile-search-bar">
+                    <input type="text" name="search" class="search-box" placeholder="Search...">
                     <button class="search-lens"><img src="Assets/search.png" alt=""></button>
+                </form>
+                <div class="menu-icons">
+                    <a href="#"><img src="Assets/shopping-cart.png" alt=""></a>     
                 </div>
-                <div class="menu-icon">
-                    <img src="Assets/menu.png" alt="" id="hamburger-menu">
+                <div class="menu-icons">
+                    <img src="Assets/menu.png" alt="" id="hamburger-menu" class="menu-icon">
                 </div>
             </div>
             

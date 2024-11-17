@@ -1,4 +1,4 @@
-var menuIcon = document.querySelector('.menu-icon');
+var menuIcon = document.getElementById("hamburger-menu");
 var sideBar = document.querySelector('.side-bar');
 
 menuIcon.addEventListener('click', () => {
@@ -6,12 +6,14 @@ menuIcon.addEventListener('click', () => {
     sideBar.classList.toggle('open');
 
     // Get the image element
-    const image = document.getElementById("hamburger-menu");
+    // const menuIcon = document.getElementById("hamburger-menu");
 
     // Change icon based on the sidebar's visibility
     if (sideBar.classList.contains('open')) {
-        image.src = "Assets/cancel-menu.png"; // Icon when sidebar is open
+        menuIcon.src = "Assets/cancel-menu.png"; // Icon when sidebar is open
     } else {
-        image.src = "Assets/menu.png";  // Icon when sidebar is closed
+        menuIcon.src = "Assets/menu.png";  // Icon when sidebar is closed
     }
 });
+
+
