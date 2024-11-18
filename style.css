@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 
@@ -12,12 +12,15 @@
 /* Set the body to have relative positioning */
 body {
     position: relative;
+
 }
 
 /* Header styling */
 header {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1); /* Add a soft shadow for depth */
     padding: 25px 0; /* Vertical padding */
+    width: 100%;
+    background: #F0F1EA;
 }
 
 /* Container for central alignment and width */
@@ -50,7 +53,7 @@ nav ul {
 
 /* Navigation links styling */
 nav ul a {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
 }
@@ -111,6 +114,10 @@ nav ul a {
     background-color: #FFA9A3;
 }
 
+.search-btn:hover {
+    background-color: #f98981;
+}
+
 .icon-right {
     display: none !important;
 }
@@ -168,10 +175,11 @@ nav ul a {
     right: -250px;  /* Hidden off-screen initially */
     height: 100%;  /* Full viewport height */
     width: 250px;  /* Sidebar width */
-    background-color: rgba(91, 117, 244, 0.867);
+    background-color: #3D5467;
     z-index: 20;  /* Layer above main content */
     transition: 0.3s ease;  /* Smooth slide-in effect */
     padding-top: 50px;  /* Padding to align below header */
+    
 }
 
 /* Class to toggle sidebar visibility */
@@ -192,19 +200,34 @@ nav ul a {
     }
 }
 
-/* .side-bar {
-    display: flex;
-    justify-items: flex-start;
 
-} */
 
 .side-bar > nav ul {
     flex-direction: column;
-    padding-top: 45px;
+    padding-top: 37px;
     justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 20px;
+    gap: 5px;
     
+}
+.side-bar > nav ul > li {
+    margin: 0;
+}
+
+.side-bar > nav > ul > a {
+    color: #F0F1EA;
+    margin: 0;
+    font-size: 16px;
+    width: 100%;
+    padding: 20px 18px;
+}
+
+.side-bar > nav > ul > a:hover {
+    background: #56738a; 
+}
+
+.side-bar > nav > ul > a:focus {
+    background: #56738a; 
 }
 
 .mobile-search-bar{
@@ -228,7 +251,8 @@ nav ul a {
     padding: 0 0.5em;
     background: transparent;
     opacity: 0;
-    width: 0px;
+    /* margin-left: auto; */
+    width: 23px;
     
     
     
