@@ -39,7 +39,7 @@ header {
 
 /* Logo image size */
 .logo {
-    width: 150px;
+    width: 120px;
 }
 
 /* Navigation styling */
@@ -56,6 +56,7 @@ nav ul a {
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
+    color: #3D5467;
 }
 
 /* Right section styling (search and icons) */
@@ -87,17 +88,18 @@ nav ul a {
 .search-bar input[type='text'] {
     width: 400px;
     padding-inline: 25px;
+    padding-right: 70px;
     height: 50px;
     border-radius: 35px;
     outline: none;
-    border: none;
-    background-color: hsl(252, 35%, 95%); /* Light color */
+    border: 1px solid hsl(207, 26%, 32%);
+    background-color: white; /* Light color */
     font-size: 15px;
 }
 
 /* Search button image size */
 .search-btn img {
-    width: 18px;
+    width: 23px;
 }
 
 /* Search button styling */
@@ -111,11 +113,11 @@ nav ul a {
     bottom: 0;
     right: -2px;
     border-radius: 0 20px 20px 0;
-    background-color: #FFA9A3;
+    background-color: #567e9e;
 }
 
 .search-btn:hover {
-    background-color: #f98981;
+    background-color: #304c63;
 }
 
 .icon-right {
@@ -124,7 +126,7 @@ nav ul a {
 
 
 /* Responsive styling for screens under 1050px width */
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
     .logo {
         width: 70px; /* Smaller logo size */
         margin-right: 10px;
@@ -223,10 +225,10 @@ nav ul a {
 }
 
 .side-bar > nav > ul > a:hover {
-    background: #56738a; 
+    background: #6789a4; 
 }
 
-.side-bar > nav > ul > a:focus {
+.side-bar > nav > ul > a:focus, a: :hover {
     background: #56738a; 
 }
 
